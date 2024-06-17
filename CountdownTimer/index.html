@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+   <link rel="stylesheet" href="style.css">
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <script src="countdown.js"></script>
+</head>
+<body>
+    <header>
+    <h1>Countdown Timer</h1> 
+    </header>
+    <div id="main">
+        <div id="container">
+            <label id="chtitle">Set title for countdown</label>
+            <hr>
+            <button id="chbtn" onclick="changetitle(this)"><i class="ri-edit-2-fill"></i></button>
+            <div id="base-timer" >
+                <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <g class="base-timer__circle">
+                 <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45" />
+                </g>        
+                </svg>
+                <div class="buttons">
+                    <button id="start-button" onclick="showCountdown(this)">Start Countdown</button>
+                    <button id="clear-button" onclick="clearCountdown(this) ">Clear countdown</button>
+                </div>
+                <div id="remaining-time">
+                 Time Left:
+                 <p>
+                <span id="days">00</span> days :
+                <span id="hours">00</span> hours :
+                <span id="minutes">00</span> minutes :
+                <span id="seconds">00</span> seconds 
+                </p>
+                </div>
+            </div>
+            <div class="settimer">
+                <label for="target-date">Set Target Date and Time:</label>
+               <input type="datetime-local" id="target-date" onchange="showDate(this)">
+            </div>
+        </div>
+       <button id="add-anotherTimer" onclick="addTimer()">+</button>
+    </div>
+ 
+</body>
+</html>

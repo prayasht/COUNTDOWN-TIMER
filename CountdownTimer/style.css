@@ -1,0 +1,165 @@
+header{
+    position: fixed;
+    min-height: 40px;
+    width: 99%;
+    background-color: #5a6877;
+    text-align: center;
+}
+
+@keyframes scroll{
+    from{
+        opacity: 0;
+        scale: 0.6;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+
+
+}
+
+#main {
+    position: fixed;
+    width: 99%;
+    top: 100px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    place-items: center;
+    background-image: url(timer-background.jpg);
+    background-repeat: no-repeat;
+    height: 80vh;
+    overflow: auto;
+    padding-top: 40px;
+}
+main ::-webkit-scrollbar{
+    width: 20px;
+}
+.main::-webkit-scrollbar-thumb {
+    background-color: #888; /* Color of the draggable handle */
+    border-radius: 5px; /* Rounded corners */
+    
+}
+
+.main::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color of the scrollbar track */
+}
+#container{
+    background-color: #29292a;
+    color: #fff;
+    height: 550px;
+    width: 550px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    animation: scroll;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+
+}
+
+#base-timer {
+    position: relative;
+    top: -8%;
+    left: 15%;
+    height: 400px;
+    width: 400px;
+  }
+  
+  .base-timer__circle {
+    fill: none;
+    stroke: none;
+  }
+  
+  .base-timer__path-elapsed {
+    stroke-width: 6px;
+    stroke: grey;}
+
+.settimer{
+    background-color: #fff;
+    position: relative;
+    height: 15%;
+    width: 90%;
+    left: 5%;
+    bottom: 7%;
+    text-align: center;
+}
+
+.buttons{
+    position: absolute;
+    top: 50%;
+    left: 31%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(1,1fr);
+}
+.buttons button{
+    width: 160px;
+}
+
+.settimer{
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.settimer input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #69798a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.3s;
+}
+
+
+button:hover {
+    background-color: #a4b6b5;
+    scale: 1.1;
+    
+}
+
+#remaining-time{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    background: none;
+    width: 71%;
+    height: 20%;
+    display: grid;
+    place-items: center;
+}
+#add-anotherTimer{
+position: fixed;
+right: 25%;
+top: 77%;
+height: 70px;
+width: 70px;
+}
+#chtitle{
+    position: relative;
+    top:1%;
+    left: 10%;
+    font-size: 1.5em;
+}
+hr{
+    position: relative;
+    /* left: -10%; */
+    top:  1%;
+}
+#chbtn{
+    position: relative;
+    height: 30px;
+    width: 10px;
+    left: 1%;
+    top: -9%;
+    background-image: url();
+}
